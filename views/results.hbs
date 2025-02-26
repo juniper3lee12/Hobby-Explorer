@@ -1,0 +1,60 @@
+<div class='results'>
+  <h2 class='sigmar-regular'>"{{hobby}}"</h2>
+  <div class='container__results'>
+    <div class='top__nav'>
+      <div class='tab active' onclick="location.href='/'">Home</div>
+      <div class='tab' onclick="showTab('all')">All</div>
+      <div class='tab' onclick="showTab('videos')">Videos</div>
+      <div class='tab' onclick="showTab('books')">Books</div>
+    </div>
+    <div class='tab-content show' id='videosSection'>
+      <div class='youtube__section'>
+        <div class='video'>
+          {{#each hobbyVideos}}
+            <div class='title'> {{this.title}} </div>
+            <iframe
+              width='400'
+              height='350'
+              src='https://www.youtube.com/embed/{{this.id.videoId}}?si=g08UIji_jfNe1hYJ'
+              title='YouTube video player'
+              frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              allowfullscreen
+            ></iframe>
+            <div class='button-container'>
+              <button
+                class='youtube__button'
+                onclick="window.open('https://youtube.com/watch?v={{this.id.videoId}}', '_blank')"
+                target='_blank'
+              >View on YouTube</button>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class='tab-content show' id='booksSection'>
+      <div class='books__section'>
+        {{#each hobbyBooks}}
+          <div class='parent' id='gridContainer'>
+            <div class='child'>
+              <img src='{{this.thumbnail}}' class='center' alt='Alps' />
+            </div>
+            <div class='child'>
+              <div class='view-book'>
+                <a
+                  target='_blank'
+                  href={{this.previewLink}}
+                  class='btn btn-secondary'
+                >Read this book</a>
+              </div>
+              <div class='title'>{{this.title}}</div>
+              <div class='author'>{{this.authors}}</div>
+              <div class='description'>{{this.description}}</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <script src='/javascripts/script-show.js'></script>
+  </div>
+</div>
