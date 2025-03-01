@@ -24,7 +24,7 @@ This site aims to help people discover interesting hobbies and activities to enj
 # Technologies
 
 - The user interface is created using CSS, HTML, and Javascript.
-- This web application uses Express.js handle the server side.
+- This web application uses Express.js to handle the server side.
 
 # Resources
 
