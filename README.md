@@ -2,7 +2,7 @@
 
 This site aims to help people discover interesting hobbies and activities to enjoy during their leisure hours. It gathers a variety of cool and unique hobby ideas, ranging from arts and crafts to outdoor adventures. For each hobby idea, the website uses videos from the YouTube Data API and books from the Google Books API to provide resources for those who want to start learning something new.
 
----
+View the live application here: https://hobbyex-5a67ccd873d0.herokuapp.com/
 
 # Dependencies
 
