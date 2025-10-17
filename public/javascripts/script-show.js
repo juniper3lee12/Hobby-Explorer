@@ -14,6 +14,10 @@ function showTab(section) {
   if (section === 'all') {
     videos.classList.add('show');
     books.classList.add('show');
+    // reset container layout to default grid when showing both
+    containerResults.style.display = '';
+    containerResults.style.gridTemplateAreas = '';
+    containerResults.style.gridTemplateColumns = '';
   } else if (section === 'videos') {
     videos.classList.add('show');
     books.classList.remove('show');
